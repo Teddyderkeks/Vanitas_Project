@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/treppenhaus2.rpy", line 41: expected ':' not found.
+    label treppenhaus2
+                      ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Jun 22 17:47:46 2020
