@@ -1,4 +1,12 @@
 define b = Character("Bob")
+default glitchfertig = False
+
+image glitch:
+        "glitch1"
+        pause .09
+        "glitch2"
+        pause .09
+        repeat 3
 
 screen pfeilweiter():
     frame:
@@ -46,6 +54,11 @@ label konversation:
     with zoomin
 
     b "Gespräch mit Kollegen"
+
+    scene glitch
+
+    #scene kollegen
+
     "Kollege" "bla bla bla"
 
     jump treppenhaus1
