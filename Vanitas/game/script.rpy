@@ -73,12 +73,35 @@ label konversation:
 
     $ konversation = True
 
-    scene kollegen
+    scene treppenhaus1gruppe
     with zoomin
 
-    a "Gespräch mit Kollegen"
-
-    "Kollege" "bla bla bla"
+    a "Hey- schön euch zu sehen. Wie war eure Mittagspause?"
+    "Tycho" "Oh, hey. Wir waren gerade unten beim Essen. Wir haben dich schon vermisst- hattest du keinen Hunger?"
+    "Neiro" "(lacht) Er hält sich mittlerweile lieber in höheren Kreisen auf, nicht wahr? Ich hatte dich zuvor aus Anans Büro kommen sehen."
+    a "Ja, ich war bei ihm, aber…"
+    "Neiro" "Wusste ich es doch! Na, wie war es mit dem Chef zu Mittag zu essen? Ich stelle es mir traumhaft vor Zeit mit einem so großen Mann wie ihm zu verbringen."
+    "Armene" "Ich wünschte ich hätte einmal das Glück mit ihm persönlich zu sprechen. Es gibt wirklich keine größere Ehre als für Anan zu arbeiten."
+    "Era" "Unglaublich charmant und gut aussehend ist er auch noch, das muss mal gesagt sein!"
+    "Tycho" "(lacht) Ich glaube nicht, dass das der Grund war, aus welchem Atropos mit ihm zu Mittag gegessen hat. Also los, erzähl schon."
+    a "{i}Ich sollte besser nichts von der Pille erwähnen. Sie würden mich vermutlich dafür verurteilen.{/i}"
+    a "Ach, es ging um ein paar persönliche Sachen. Nichts weiter Wichtiges."
+    "Neiro" "Es ist schon unglaublich, dass sich so eine bedeutende Person wie Anan Zeit für persönliche Gespräche nimmt. Und dabei ist er auch immer so locker und entspannt drauf. "
+    "Neiro" "Ich hatte neulich auch mal ein Gespräch mit ihm und…"
+    "Tycho" "(lacht)Die Geschichte hast du schon tausend Mal erzählt."
+    a "{i}Anan wirkte heute nicht wirklich locker. Aber vielleicht hatte er ja einen stressigen Tag. Er hat immerhin nicht wenig Verantwortung.{/i}"
+    a "Heute beim Gespräch wirkte er nicht unbedingt entspannt…"
+    "Neiro" "Nun, wenn man so hart und voller Freude arbeitet wie Anan, kann man sich wohl nicht entspannen. Er hat immer etwas zu tun."
+    "Era" "Es muss viel Arbeit machen das Glück aller zu erhalten. Wir sind ihm wirklich viel schuldig."
+    a "{i}Warum haben sie meine Aussage so sehr verdreht?{/i}"
+    a "Nein, so meinte ich das nicht. Es geht mehr darum wie Anan sich verh…"
+    "Neiro" "Wir können alle noch viel von Anan lernen. Sein Enthusiasmus ist unglaublich. Aber hier zu arbeiten und das Glück in die Welt zu bringen- es gibt einfach keinen besseren Job."
+    "Armene" "Und wir haben das Glück, dass wir unsere Happiness dafür auch noch umsonst bekommen. Kostenloses Glück, besser geht es nicht."
+    a "{i}Sie verehren Anan wirklich wie einen Gott. Aber irgendwie… warum ignorieren sie meine Aussagen als wäre ich gar nicht da?{/i}"
+    a "{i} Außerdem… Anan… er wirkt seit gestern irgendwie nicht mehr so glücklich und zuvorkommend wie ich ihn in Erinnerung hatte. Irgendetwas ist… {/i}"
+    "Tycho" "Oh, wir sollten langsam zurück an die Arbeit. Lass dich morgen mal herab mit uns Gewöhnlichen zu speisen, Atropos. (lacht)"
+    "Neiro" "Es ist an der Zeit für Glücklichkeit. (lacht) Bringen wir den Menschen noch mehr davon. Na los, zurück an die Arbeit!"
+    a "Wir sehen uns."
 
     jump treppenhaus1
 
@@ -104,13 +127,13 @@ label treppenhaus1:
     show screen pfeiltreppe
 
     if konversation:
-
+        scene treppenhaus1
         menu:
             "Plakate anschauen":
                 jump treppenhausOhneMenu
 
     else:
-
+        scene treppenhaus1gruppe
         menu:
             "Konversation mit Kollegen":
                 jump treppenhausOhneMenu
