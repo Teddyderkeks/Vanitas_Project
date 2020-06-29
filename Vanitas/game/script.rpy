@@ -12,7 +12,7 @@ image glitch:
 screen pfeilweiter():
     frame:
         xalign 1.0 ypos 500
-        add rotate = 90
+        #add rotate = 90
         hbox:
             textbutton "--->":
                 action Jump ("weiter")
@@ -26,10 +26,10 @@ screen pfeiltreppe():
 
 screen pfeil():
     frame:
-        xalign 0.75 ypos 400
+        xalign 1.0 ypos 500
         imagebutton:
-            idle ""
-            hover ""
+            idle "pfeil"
+            hover "pfeilblau"
             action Jump ("weiter")
 
 
@@ -41,7 +41,7 @@ label start:
 
     #show screen pfeil
 
-    call screen pfeilweiter
+    call screen pfeil
 
 label weiter:
 

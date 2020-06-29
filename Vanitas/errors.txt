@@ -6,9 +6,5 @@ File "game/script.rpy", line 15: expected a keyword argument, colon, or end of l
     add rotate = 90
                ^
 
-File "game/script.rpy", line 30: hbox expects a non-empty block.
-    hbox:
-         ^
-
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jun 29 13:02:02 2020
+Mon Jun 29 13:08:49 2020
