@@ -48,7 +48,7 @@ label letzterTag:
     show kloth aengstlich2
 
     k "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
-    k "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemanden darüber sprechen."
+    k "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
 
     show kloth aengstlich1
 
@@ -95,9 +95,6 @@ label zustimmen:
 
     #$ renpy.movie_cutscene("atropos_will_Kloth_toeten.mov")
     #sequenz
-
-    "nein"
-
     jump treppenhaus2
 
 label ablehnen:
