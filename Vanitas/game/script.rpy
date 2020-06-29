@@ -120,25 +120,40 @@ label plakate:
 
     call screen pfeil_unten
 
-label treppenhaus1:
 
-    scene treppenhaus1
+label treppenhaus1:
 
     show screen pfeiltreppe
 
     if konversation:
         scene treppenhaus1
+
+        a "{i}Irgendetwas war an dem Gespräch seltsam. Aber irgendwie bekomme ich es nicht wirklich zu fassen… ich…{/i}"
+        a "{i}Naja, egal. Ich sollte jetzt…{/i}"
+
         menu:
-            "Plakate anschauen":
+            "Ich könnte mir nun die Plakate mal etwas näher ansehen.":
                 jump treppenhausOhneMenu
+            "Ich sollte wirklich keine Zeit mehr verschwenden. Die Pille ist jetzt wichtiger.":
+                jump treppenhausOhneMenu2
 
     else:
         scene treppenhaus1gruppe
         menu:
-            "Konversation mit Kollegen":
+            "Vielleicht könnte ich noch mit meinen Kollegen reden.":
                 jump treppenhausOhneMenu
+            "Ich sollte wirklich keine Zeit mehr verschwenden. Die Pille ist jetzt wichtiger.":
+                jump treppenhausOhneMenu2
 
 label treppenhausOhneMenu:
+
+    a "{i}Atropos, denk an die Pillen. Du solltest wirklich nicht mehr länger warten. Merkst du nicht, dass du nicht mehr perfekt glücklich bist?{/o}"
+    a "{i}Du machst dir zu viele Gedanken und Sorgen. Sei wieder glücklich. Kehre ins Labor zurück und nimm die Happiness-Pille.{/i}"
+    a "{i}Ich sollte wirklich die Pille nehmen… was mache ich hier überhaupt noch? Ich sollte gehen.{/i}"
+
+    call screen pfeiltreppe
+
+label treppenhausOhneMenu2:
 
     "Hier gibt es nichts mehr zum anschauen"
 
