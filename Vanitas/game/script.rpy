@@ -1,5 +1,6 @@
-define b = Character("Bob")
+define a = Character("Atropos")
 default glitchfertig = False
+image pfeil_rechts = Transform ("pfeil",rotate = 90)
 
 image glitch:
         "glitch1"
@@ -11,6 +12,7 @@ image glitch:
 screen pfeilweiter():
     frame:
         xalign 1.0 ypos 500
+        add rotate = 90
         hbox:
             textbutton "--->":
                 action Jump ("weiter")
@@ -21,11 +23,23 @@ screen pfeiltreppe():
         hbox:
             textbutton "PFEIL":
                 action Jump ("treppenhaus2")
+
+screen pfeil():
+    frame:
+        xalign 0.75 ypos 400
+        imagebutton:
+            idle ""
+            hover ""
+            action Jump ("weiter")
+
+
 label start:
 
-    scene anfangliste
+    scene tagebuch
 
-    "Hier sind alle wichtige Hinweise zu sehen, um den Prototypen verstehen zu können."
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+
+    #show screen pfeil
 
     call screen pfeilweiter
 
@@ -54,10 +68,6 @@ label konversation:
     with zoomin
 
     b "Gespräch mit Kollegen"
-
-    scene glitch
-
-    #scene kollegen
 
     "Kollege" "bla bla bla"
 

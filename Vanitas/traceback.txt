@@ -1,44 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "renpy/common/00start.rpy", line 190, in <module>
-    renpy.execute_default_statement(True)
-  File "game/treppenhaus2.rpy", line 3, in set_default
-    default leiche = False
-Exception: store.leiche is being given a default a second time.
+  File "game/script.rpy", line 31, in script
+    show screen pfeil
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+Exception: Screen pfeil is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 143, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\execution.py", line 908, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 190, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 3495, in execute_default_statement
-    i.set_default(start)
-  File "game/treppenhaus2.rpy", line 3, in set_default
-    default leiche = False
-Exception: store.leiche is being given a default a second time.
+  File "game/script.rpy", line 31, in script
+    show screen pfeil
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1949, in execute
+    self.call("execute")
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 1107, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen pfeil is not known.
+
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Mon Jun 22 18:29:20 2020
+Mon Jun 29 12:51:49 2020
