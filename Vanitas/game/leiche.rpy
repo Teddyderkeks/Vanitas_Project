@@ -1,12 +1,17 @@
 define k = Character ("Kloth")
 
-label leiche:
+label letzterTag:
     $ leiche = True
-    scene leiche
+    scene treppenhaus2
 
     show kloth aengstlich1
 
-    k "Ich muss mit dir sprechen."
+    k "Atropos!"
+    a "Kloth, was ist los?"
+    k "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
+    a "Beruhige dich erst einmal und atme tief durch. Was ist passiert?"
+    k "Nicht hier … es könnte jemand kommen und dann…"
+    a "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
     menu:
         "Gespräch zustimmen":

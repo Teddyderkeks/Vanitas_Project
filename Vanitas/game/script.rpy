@@ -54,8 +54,6 @@ label weiter:
     a "{i} Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären. {/i}"
     a "{i} Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen. {/i}"
 
-    show screen pfeiltreppe
-
     menu:
         "Ich könnte mir die Plakate mal etwas näher ansehen.":
             jump plakate
@@ -69,11 +67,9 @@ label weiter:
 
 label konversation:
 
-    hide screen pfeiltreppe
-
     $ konversation = True
 
-    scene treppenhaus1gruppe
+    scene menschengruppe
     with zoomin
 
     a "Hey- schön euch zu sehen. Wie war eure Mittagspause?"
@@ -118,27 +114,38 @@ label plakate:
     a "Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken."
     a "Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren."
 
-    call screen pfeil_unten
 
 label treppenhaus1:
 
-    scene treppenhaus1
-
-    show screen pfeiltreppe
-
     if konversation:
         scene treppenhaus1
+
+        a "{i}Irgendetwas war an dem Gespräch seltsam. Aber irgendwie bekomme ich es nicht wirklich zu fassen… ich…{/i}"
+        a "{i}Naja, egal. Ich sollte jetzt…{/i}"
+
         menu:
-            "Plakate anschauen":
+            "Ich könnte mir nun die Plakate mal etwas näher ansehen.":
                 jump treppenhausOhneMenu
+            "Ich sollte wirklich keine Zeit mehr verschwenden. Die Pille ist jetzt wichtiger.":
+                jump treppenhausOhneMenu2
 
     else:
         scene treppenhaus1gruppe
         menu:
-            "Konversation mit Kollegen":
+            "Vielleicht könnte ich noch mit meinen Kollegen reden.":
                 jump treppenhausOhneMenu
+            "Ich sollte wirklich keine Zeit mehr verschwenden. Die Pille ist jetzt wichtiger.":
+                jump treppenhausOhneMenu2
 
 label treppenhausOhneMenu:
+
+    a "{i}Atropos, denk an die Pillen. Du solltest wirklich nicht mehr länger warten. Merkst du nicht, dass du nicht mehr perfekt glücklich bist?{/o}"
+    a "{i}Du machst dir zu viele Gedanken und Sorgen. Sei wieder glücklich. Kehre ins Labor zurück und nimm die Happiness-Pille.{/i}"
+    a "{i}Ich sollte wirklich die Pille nehmen… was mache ich hier überhaupt noch? Ich sollte gehen.{/i}"
+
+    call screen pfeiltreppe
+
+label treppenhausOhneMenu2:
 
     "Hier gibt es nichts mehr zum anschauen"
 
