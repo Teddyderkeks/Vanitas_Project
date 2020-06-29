@@ -2,12 +2,13 @@
 default plakat = False
 default leiche = False
 
-screen verlassen():
+screen pfeil_verlassen():
     frame:
-        xalign 0.75 ypos 150
-        hbox:
-            textbutton "PFEIL":
-                action Jump ("credits")
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            action Jump ("credits")
 
 screen pfeil_back():
     frame:
@@ -26,7 +27,7 @@ label treppenhaus2:
     if plakat:
         if leiche:
 
-            call screen verlassen
+            call screen pfeil_verlassen
 
         else:
 
@@ -38,12 +39,33 @@ label treppenhaus2:
 
     else:
         if leiche:
+            if zustimmen:
 
-            show screen verlassen
+                a "Nein."
+                a "Nein!"
+                a "Kloth… verdammt… wie konnte das nur passieren? Und was habe ich nur getan? Was hatte ich tun wollen?"
+                a "Nein… nein… das war nicht ich… das war… dieser… dieser miese…. Ich dachte wir wären Freunde?! Wie konnte Chesis ihm das nur antun?"
+                a "Wie konnte er einem seiner besten Freunde so etwas antun? Wie hatte er Kloth in den Abgrund stürzen können?"
+                a "Hätte ich es verhindern können? Nein- das spielt keine Rolle. Ich hätte es verhindern müssen."
+                a "Das hätte alles niemals passieren dürfen. Ich werde… ich werde dafür sorgen, dass jemand dafür büßt."
+                a "Ich werde dich rächen, Kloth, das verspreche ich dir! Dein Mord wird nicht ungesühnt bleiben!"
 
-            menu:
-                "Plakate":
-                    jump plakate2
+                call screen pfeil_verlassen
+            else:
+                a "Nein."
+                a "Nein!"
+                a "Kloth… verdammt… wie konnte das nur passieren? "
+                a "Dieser… dieser miese…. Ich dachte wir seien Freunde. Wie konnte Chesis ihm das nur antun?"
+                a "Wie konnte er einem seiner besten Freunde so etwas antun? Wie hatte er Kloth in den Abgrund stürzen können?"
+                a "Und ich… warum verdammt noch mal war ich nicht da als er mich gebraucht hat? Dann wäre das alles nicht passiert."
+                a "Ich werde… ich werde dafür sorgen, dass jemand dafür büßt."
+                a "Ich werde dich rächen, Kloth, das verspreche ich dir! Dein Mord wird nicht ungesühnt bleiben! "
+                a "Chesis wird dafür büßen. Dafür sorge ich. Wie konnte er es wagen heute Morgen so zu tun als wäre das alles nicht passiert?"
+                a "Wie konnte er es wagen mich anzulächeln und glücklich zu sein? Er hat es nicht verdient glücklich zu sein. Keiner hat das."
+                a "Ich werde dich rächen, Kloth und wenn es das letzte ist, was ich tue."
+
+                call screen pfeil_verlassen
+
         else:
 
             a "Kloth? Nein, das darf nicht wahr sein… was? Warum? Ich…"
