@@ -54,8 +54,6 @@ label weiter:
     a "{i} Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären. {/i}"
     a "{i} Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen. {/i}"
 
-    show screen pfeiltreppe
-
     menu:
         "Ich könnte mir die Plakate mal etwas näher ansehen.":
             jump plakate
@@ -69,11 +67,9 @@ label weiter:
 
 label konversation:
 
-    hide screen pfeiltreppe
-
     $ konversation = True
 
-    scene treppenhaus1gruppe
+    scene menschengruppe
     with zoomin
 
     a "Hey- schön euch zu sehen. Wie war eure Mittagspause?"
@@ -118,12 +114,8 @@ label plakate:
     a "Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken."
     a "Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren."
 
-    call screen pfeil_unten
-
 
 label treppenhaus1:
-
-    show screen pfeiltreppe
 
     if konversation:
         scene treppenhaus1

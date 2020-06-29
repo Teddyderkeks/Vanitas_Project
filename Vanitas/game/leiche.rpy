@@ -1,6 +1,6 @@
 define k = Character ("Kloth")
 
-label leiche:
+label mi:
     $ leiche = True
     scene leiche
 
