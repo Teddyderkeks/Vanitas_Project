@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/treppenhaus2.rpy", line 54: indentation mismatch.
+File "game/leiche.rpy", line 17: expected 'simple_expression' not found.
+    xpos:50
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jun 29 16:27:50 2020
+Mon Jun 29 17:05:01 2020
