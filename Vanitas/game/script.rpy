@@ -1,6 +1,9 @@
 define a = Character("Atropos")
 default glitchfertig = False
-image pfeil_rechts = Transform ("pfeil",rotate = 90)
+image pfeil_rechts = Transform ("pfeil",rotate = 180)
+image pfeil_rechts_blau = Transform ("pfeilblau",rotate = 180)
+image pfeil_unten = Transform ("pfeil",rotate = 180)
+image pfeil_unten_blau = Transform ("pfeilblau",rotate = 180)
 
 image glitch:
         "glitch1"
@@ -9,28 +12,30 @@ image glitch:
         pause .09
         repeat 3
 
-screen pfeilweiter():
-    frame:
-        xalign 1.0 ypos 500
-        #add rotate = 90
-        hbox:
-            textbutton "--->":
-                action Jump ("weiter")
-
 screen pfeiltreppe():
     frame:
-        xalign 0.75 ypos 150
-        hbox:
-            textbutton "PFEIL":
-                action Jump ("treppenhaus2")
-
-screen pfeil():
-    frame:
-        xalign 1.0 ypos 500
+        xpos 1500 ypos 800
         imagebutton:
-            idle "pfeil"
-            hover "pfeilblau"
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            action Jump ("treppenhaus2")
+
+screen pfeil_rechts():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            #background
             action Jump ("weiter")
+
+screen pfeil_unten():
+    frame:
+        xpos 1600 ypos 890
+        imagebutton:
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            action Jump ("treppenhaus1")
 
 
 label start:
@@ -39,24 +44,28 @@ label start:
 
     a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
 
-    #show screen pfeil
-
-    call screen pfeil
+    call screen pfeil_rechts
 
 label weiter:
 
-    scene treppenhaus1
+    scene treppenhaus1gruppe
 
-    "Was möchtest du machen?"
+    a "{i} Den Anschiss vom Boss hätte ich mir sparen können… ich hätte die Happiness-Pille heute Morgen einfach doch nehmen sollen. {/i}"
+    a "{i} Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären. {/i}"
+    a "{i} Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen. {/i}"
 
     show screen pfeiltreppe
 
     menu:
-        "Konversation mit Kollegen":
+        "Ich könnte mir die Plakate mal etwas näher ansehen.":
+            jump plakate
+
+        "Ich könnte mal wieder mit meinen Kollegen reden. Vielleicht haben sie interessante Neuigkeiten.":
             jump konversation
 
-        "Plakatte anschauen":
-            jump plakate
+        "Ich sollte besser wieder zurück ins Labor. Anan meinte, ich soll die Tablette sofort nachträglich einnehmen.":
+            jump treppenhausOhneMenu
+
 
 label konversation:
 
@@ -67,7 +76,7 @@ label konversation:
     scene kollegen
     with zoomin
 
-    b "Gespräch mit Kollegen"
+    a "Gespräch mit Kollegen"
 
     "Kollege" "bla bla bla"
 
@@ -80,11 +89,13 @@ label plakate:
 
     $ konversation = False
 
-    scene plakate
+    scene plakate1
 
-    b "Monolog"
+    a "Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden."
+    a "Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken."
+    a "Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren."
 
-    jump treppenhaus1
+    call screen pfeil_unten
 
 label treppenhaus1:
 
