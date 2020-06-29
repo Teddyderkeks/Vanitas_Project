@@ -1,5 +1,7 @@
 define k = Character ("Kloth")
 
+default zustimmen = False
+
 image glitch:
         "glitch1"
         pause .09
@@ -60,6 +62,8 @@ label letzterTag:
 
 label zustimmen:
 
+    $ zustimme =True
+
     k "(atmet erleichtert auf) Danke Atropos. Wirklich… vielen vielen Dank… du weißt nicht wie froh ich bin endlich jemanden zu haben, dem ich mich anvertrauen kann."
     a "Schon okay, nichts zu danken. Wir sind Freunde. Ich bin für dich da. Also, worum geht es?"
     k "Die Happiness-Pille ist nicht das, was du und jeder andere Mensch auf dieser Welt denkt."
@@ -72,29 +76,45 @@ label zustimmen:
     k "Atropos. Es gibt etwas anderes, das die Menschen ..."
 
     hide kloth
-    screen glitch
+    #screen glitch
 
     a "{i}Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen. Er ist vollkommen wahnsinnig. Siehst du es denn nicht?{/i}"
     a "{i}Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?{/i}"
     a "{i}Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?{/i}"
     a "Nein… nein, ich will ein glückliches Leben haben."
 
-    screen treppenhaus2
+    #screen treppenhaus2
 
     show kloth aengstlich2
 
     k "Hast du was gesagt? Geht es dir gut? Du hast ziemlich weggetreten gewirkt."
     a "Ich… was? Ja… ja, mir geht es gut… ich…"
+    k "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
+    a "{i}Ein glückliches Leben. Ein Leben voller Happiness.{/i}"
 
-
+    #sequenz
 
     jump treppenhaus2
 
 label ablehnen:
 
-    #sequenz
+    $ zustimmen = False
 
-    k "Monolog_ablehnen"
+    k "Oh okay. Ja klar… wenn du nicht willst… ich kann dich nicht dazu zwingen. Ich wünschte du hättest mir zugehört, Atropos. Ich dachte wir wären Freunde."
+    k "Aber da habe ich mich wohl getäuscht. Ich habe mich in dir getäuscht. In dem Moment, in dem ich dich am meisten brauche, bist du nicht für mich da."
+    a "{i}Lass dir kein schlechtes Gewissen einreden. Du hast die richtige Entscheidung getroffen.{/i}"
+    a "{i}Wie kann er sich dein Freund nennen und dich gleichzeitig in ein tödliches Geheimnis einweihen wollen? So jemand darf sich nicht dein Freund schimpfen.{/i}"
+    k "Vielleicht ist Chesis ja ein besserer Freund. Vielleicht hört wenigstens er mir zu."
+
+    # was?
+
+    k "..."
+    "Chesis" "..."
+    k "..."
+    k "… Kontrolle …"
+    k "..."
+
+    #sequenz
 
     jump treppenhaus2
 
