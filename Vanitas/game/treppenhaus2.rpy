@@ -9,16 +9,19 @@ screen verlassen():
             textbutton "PFEIL":
                 action Jump ("credits")
 
+screen pfeil_back():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            action Jump ("treppenhaus2")
+
 label treppenhaus2:
 
     hide screen pfeiltreppe
 
     scene treppenhaus2leiche
-
-    a "Kloth? Nein, das darf nicht wahr sein… was? Warum? Ich…"
-    a "{i}Vergiss die Pille nicht, Atropos. Du fängst schon an dir Sachen einzubilden. Hier ist nichts zu sehen.{/i}"
-    a "{i}Langsam wirst du wirklich wahnsinnig. Nimm die Pille und werde wieder glücklich, so wie all deine Kollegen es sind.{/i}"
-    a "{i}Du hast dein Glück verdient. So wie alle Menschen Glück verdient haben. Da hängen Plakate für die Impfung, damit auch diese Menschen bald glücklich werden können.{/i}"
 
     if plakat:
         if leiche:
@@ -28,8 +31,10 @@ label treppenhaus2:
         else:
 
             menu:
-                "Leiche":
+                "Ich sollte ins Labor zurück und meine Pille nehmen. Wenn Anan mich immer noch hier herumstehen sieht, bekomme ich ein Problem.":
                     jump leiche
+                "Ich muss mir zuvor die Leiche ansehen. Irgendetwas stimmt nicht. Ich habe Kloth den ganzen Tag noch nicht gesehen.":
+                    jump dochleiche
 
     else:
         if leiche:
@@ -40,6 +45,12 @@ label treppenhaus2:
                 "Plakate":
                     jump plakate2
         else:
+
+            a "Kloth? Nein, das darf nicht wahr sein… was? Warum? Ich…"
+            a "{i}Vergiss die Pille nicht, Atropos. Du fängst schon an dir Sachen einzubilden. Hier ist nichts zu sehen.{/i}"
+            a "{i}Langsam wirst du wirklich wahnsinnig. Nimm die Pille und werde wieder glücklich, so wie all deine Kollegen es sind.{/i}"
+            a "{i}Du hast dein Glück verdient. So wie alle Menschen Glück verdient haben. Da hängen Plakate für die Impfung, damit auch diese Menschen bald glücklich werden können.{/i}"
+
             menu:
                 "Ja natürlich. Ich muss sofort die Pille nehmen. Ich fange schon an mir Sachen einzubilden.":
                     jump monolog
@@ -65,6 +76,8 @@ label plakate2:
     a "{i}Du solltest jetzt ins Labor zurückkehren und Happiness nehmen. Werde wieder glücklich.{/i}"
     a "{i}Ja, ich sollte besser ins Labor zurückkehren.{/i}"
 
+    call screen pfeil_back
+
     jump treppenhaus2
 
 label monolog:
@@ -76,7 +89,45 @@ label monolog:
 
     jump leiche
 
+
+label dochleiche:
+
+    scene treppenhaus2leiche
+
+    a "{i}Du solltest gehen, deine Glücklichkeit wartet auf dich. Auf was wartest du also noch?{/i}"
+    a "{i}Nein… ich weiß nicht… irgendetwas stimmt nicht. Kloth, wenn er das wirklich ist und ich es mir nicht einbilde…{/i}"
+    a "{i}Nein, das könnte ich mir nicht verzeihen. Ich muss mir die Leiche anschauen und herausfinden, ob sie wirklich existiert.{/i}"
+
+    jump leiche
+
 label leiche:
+
+    scene leiche
+
+    a "Kloth?"
+    a "Nein, verdammt. Das darf doch nicht wahr sein. Das ist keine Illusion, oder? Es ist so real… das ganze Blut… und… "
+    a "So etwas kann ich mir nicht einbilden, oder? Aber wie? Warum? Kloth!"
+    a "Kloth. Bitte rede mit mir. Du kannst doch nicht tot sein."
+    a "Kloth… bitte… "
+    a "{i}Pille, du musst deine Pille nehmen. Du halluzinierst, merkst du es denn nicht? Das hier kann nicht wahr sein.{/i}"
+    a "{i}Wie könnte so etwas schreckliches wahr sein? Du bist doch eigentlich glücklich.{/i}"
+    a "Nein… es ist wahr… es ist wahr… ich will nicht, dass es wahr ist, aber es ist wahr…"
+    a "Kloth… Kloth… komm zu mir zurück. Bitte… ich… Wie soll ich nur ohne dich zurechtkommen? Du warst mein Leben lang an meiner Seite."
+    a "Ich… ich brauche dich. "
+    a "Ich… "
+    a "Bitte…"
+    a "Wieso haben die anderen vorhin nichts gesagt? Sie hätten dich doch sehen müssen. Kloth… warum haben sie dir nicht geholfen?"
+    a "Warum sind sie einfach vorbeigegangen und haben dich ignoriert? Vielleicht wärst du dann jetzt noch am Leben."
+    a "Verdammt, das darf doch alles nicht wahr sein. Warum nur? Warum? Warum? "
+    a "WARUM?"
+    a "Kann das alles einfach nur ein schlechter Traum sein? Ich habe nicht die Kraft es durchzustehen, falls es wirklich wahr sein sollte…"
+    a "{i}Ja, genau. Es ist nicht mehr als nur ein Traum. Du solltest weitergehen und eine Pause machen. Nimm die Pille, danach wird es dir besser gehen.{/i}"
+    a "Ich… ich weiß nicht mehr was ich tun soll… ich will weggehen, aber gleichzeitig habe ich das Gefühl, dass das hier real ist."
+    a "Ahhh- mein Kopf tut weh. Da ist irgendeine Erinnerung, aber ich bekomme sie nicht ganz zu fassen… Was ist das?"
+    a "Warte. Hatte ich mich nicht gestern mit Kloth unterhalten? Er kam zu mir und…"
+
+    jump letzterTag
+
 
 label credits:
 

@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/leiche.rpy", line 3: expected 'label_name_declare' not found.
-    label 
-         ^
+File "game/treppenhaus2.rpy", line 54: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jun 29 16:11:07 2020
+Mon Jun 29 16:27:50 2020
