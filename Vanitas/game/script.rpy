@@ -5,13 +5,6 @@ image pfeil_rechts_blau = Transform ("pfeilblau",rotate = 180)
 image pfeil_unten = Transform ("pfeil",rotate = 180)
 image pfeil_unten_blau = Transform ("pfeilblau",rotate = 180)
 
-image glitch:
-        "glitch1"
-        pause .09
-        "glitch2"
-        pause .09
-        repeat 3
-
 screen pfeiltreppe():
     frame:
         xpos 1500 ypos 800
