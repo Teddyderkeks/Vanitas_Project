@@ -1,7 +1,6 @@
 
 default plakat = False
 default leiche = False
-default ende = False
 
 screen pfeil_verlassen():
     frame:
@@ -27,16 +26,16 @@ label treppenhaus2:
 
     if plakat:
         if leiche:
-            if ende:
-                call screen pfeil_verlassen
+
+            call screen pfeil_verlassen
 
         else:
 
             menu:
                 "Ich sollte ins Labor zurück und meine Pille nehmen. Wenn Anan mich immer noch hier herumstehen sieht, bekomme ich ein Problem.":
-                    jump dochleiche
-                "Ich muss mir zuvor die Leiche ansehen. Irgendetwas stimmt nicht. Ich habe Kloth den ganzen Tag noch nicht gesehen.":
                     jump leiche
+                "Ich muss mir zuvor die Leiche ansehen. Irgendetwas stimmt nicht. Ich habe Kloth den ganzen Tag noch nicht gesehen.":
+                    jump dochleiche
 
     else:
         if leiche:
@@ -50,7 +49,7 @@ label treppenhaus2:
                 a "Hätte ich es verhindern können? Nein- das spielt keine Rolle. Ich hätte es verhindern müssen."
                 a "Das hätte alles niemals passieren dürfen. Ich werde… ich werde dafür sorgen, dass jemand dafür büßt."
                 a "Ich werde dich rächen, Kloth, das verspreche ich dir! Dein Mord wird nicht ungesühnt bleiben!"
-                $ ende= True
+
                 call screen pfeil_verlassen
             else:
                 a "Nein."
@@ -64,7 +63,7 @@ label treppenhaus2:
                 a "Chesis wird dafür büßen. Dafür sorge ich. Wie konnte er es wagen heute Morgen so zu tun als wäre das alles nicht passiert?"
                 a "Wie konnte er es wagen mich anzulächeln und glücklich zu sein? Er hat es nicht verdient glücklich zu sein. Keiner hat das."
                 a "Ich werde dich rächen, Kloth und wenn es das letzte ist, was ich tue."
-                $ ende= True
+
                 call screen pfeil_verlassen
 
         else:
@@ -148,6 +147,7 @@ label leiche:
     a "Ich… ich weiß nicht mehr was ich tun soll… ich will weggehen, aber gleichzeitig habe ich das Gefühl, dass das hier real ist."
     a "Ahhh- mein Kopf tut weh. Da ist irgendeine Erinnerung, aber ich bekomme sie nicht ganz zu fassen… Was ist das?"
     a "Warte. Hatte ich mich nicht gestern mit Kloth unterhalten? Er kam zu mir und…"
+
     jump letzterTag
 
 
@@ -155,6 +155,6 @@ label credits:
 
     scene credits
 
-    "Fortsetzung folgt..."
+    "Danke fürs Spielen"
 
     return
