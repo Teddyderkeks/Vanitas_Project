@@ -29,13 +29,19 @@ screen pfeil_unten():
             idle "pfeil_rechts"
             hover "pfeil_rechts_blau"
             action Jump ("treppenhaus1")
-
+screen pfeil_backtreppe1():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "pfeil_rechts"
+            hover "pfeil_rechts_blau"
+            action Jump ("treppenhaus1")
 
 label start:
 
     scene tagebuch
 
-    a "{i}{color=#000000}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/color}{/i}"
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
 
     call screen pfeil_rechts
 
@@ -71,13 +77,14 @@ label konversation:
     a "Ja, ich war bei ihm, aber…"
     "Neiro" "Wusste ich es doch! Na, wie war es mit dem Chef zu Mittag zu essen? Ich stelle es mir traumhaft vor Zeit mit einem so großen Mann wie ihm zu verbringen."
     "Armene" "Ich wünschte ich hätte einmal das Glück mit ihm persönlich zu sprechen. Es gibt wirklich keine größere Ehre als für Anan zu arbeiten."
+    "Neiro" "Und es gibt definitiv auch keinen besseren Chef. Ich kenne niemanden, der sich so sehr um das Wohl der Menschheit sorgt und sich für alle einsetzt."
     "Era" "Unglaublich charmant und gut aussehend ist er auch noch, das muss mal gesagt sein!"
     "Tycho" "(lacht) Ich glaube nicht, dass das der Grund war, aus welchem Atropos mit ihm zu Mittag gegessen hat. Also los, erzähl schon."
     a "{i}Ich sollte besser nichts von der Pille erwähnen. Sie würden mich vermutlich dafür verurteilen.{/i}"
     a "Ach, es ging um ein paar persönliche Sachen. Nichts weiter Wichtiges."
     "Neiro" "Es ist schon unglaublich, dass sich so eine bedeutende Person wie Anan Zeit für persönliche Gespräche nimmt. Und dabei ist er auch immer so locker und entspannt drauf. "
     "Neiro" "Ich hatte neulich auch mal ein Gespräch mit ihm und…"
-    "Tycho" "(lacht)Die Geschichte hast du schon tausend Mal erzählt."
+    "Tycho" "(lacht) Die Geschichte hast du schon tausend Mal erzählt."
     a "{i}Anan wirkte heute nicht wirklich locker. Aber vielleicht hatte er ja einen stressigen Tag. Er hat immerhin nicht wenig Verantwortung.{/i}"
     a "Heute beim Gespräch wirkte er nicht unbedingt entspannt…"
     "Neiro" "Nun, wenn man so hart und voller Freude arbeitet wie Anan, kann man sich wohl nicht entspannen. Er hat immer etwas zu tun."
@@ -103,9 +110,11 @@ label plakate:
 
     scene plakate1
 
-    a "Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden."
-    a "Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken."
-    a "Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren."
+    a "{i}Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden.{/i}"
+    a "{i}Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken.{/i}"
+    a "{i}Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren.{/i}"
+
+    call screen pfeil_backtreppe1
 
 
 label treppenhaus1:
@@ -140,7 +149,7 @@ label treppenhausOhneMenu:
 
 label treppenhausOhneMenu2:
 
-    "Hier gibt es nichts mehr zum anschauen"
+    a "Ja, sie ist eindeutig wichtiger. Nimm sie und werde wieder glücklich."
 
     call screen pfeiltreppe
 
