@@ -1,4 +1,4 @@
-Mon Jun 29 14:41:20 2020
+Mon Jun 29 15:14:18 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
@@ -8,7 +8,7 @@ Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
 Loading script took 0.08s
-Loading save slot metadata. took 0.02s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.07s
@@ -459,11 +459,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.08000016212s
+Total time until interface ready: 1.07199978828s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.017333 seconds.
-- Frame drawn at 0.030333 seconds.
-- 0.030333 seconds to render 5 frames.
+- Frame drawn at 0.014333 seconds.
+- Frame drawn at 0.014333 seconds.
+- Frame drawn at 0.026333 seconds.
+- Frame drawn at 0.040333 seconds.
+- 0.040333 seconds to render 5 frames.
