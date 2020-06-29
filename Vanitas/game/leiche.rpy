@@ -28,7 +28,7 @@ label letzterTag:
     scene treppenhaus2
 
     show kloth aengstlich1:
-        xalign 0.25
+        xalign 0.35
         yalign 1.0
 
     k "Atropos!"
@@ -39,7 +39,7 @@ label letzterTag:
     a "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
     show chesis freundlich:
-        xalign 0.75
+        xpos 1200
         yalign 1.0
 
     k "Ich… ich…"
@@ -77,15 +77,14 @@ label zustimmen:
 
     k "Atropos. Es gibt etwas anderes, das die Menschen ..."
 
-    hide kloth
-    #screen glitch
+    show glitch
 
     a "{i}Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen. Er ist vollkommen wahnsinnig. Siehst du es denn nicht?{/i}"
     a "{i}Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?{/i}"
     a "{i}Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?{/i}"
     a "Nein… nein, ich will ein glückliches Leben haben."
 
-    #screen treppenhaus2
+    hide glitch
 
     show kloth aengstlich2
 
