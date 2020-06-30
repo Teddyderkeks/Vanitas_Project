@@ -27,7 +27,7 @@ label letzterTag:
     with fade
 
     show kloth aengstlich1:
-        xalign 0.35
+        xalign 0.65
         yalign 1.0
 
     k "Atropos!"
@@ -38,7 +38,7 @@ label letzterTag:
     a "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
     show chesis freundlich:
-        xpos 1200
+        xpos -100
         yalign 1.0
 
     k "Ich… ich…"
@@ -54,7 +54,7 @@ label letzterTag:
     k "Du bist der Einzige, der mir helfen kann!"
 
     menu:
-        "Ja, natürlich helfe dich dir. Erzähl endlich was los ist. Wie kann ich dir helfen?":
+        "Ja, natürlich helfe ich dir. Erzähl endlich was los ist. Wie kann ich dir helfen?":
             jump zustimmen
         "Können wir das Gespräch vielleicht vertagen? Ich habe echt Hunger und ich will zudem Chesis nicht warten lassen.":
             jump verschieben
@@ -79,9 +79,9 @@ label zustimmen:
     show glitch
     play music "Glitch.mp3"
 
-    a "{i}Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen. Er ist vollkommen wahnsinnig. Siehst du es denn nicht?{/i}"
-    a "{i}Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?{/i}"
-    a "{i}Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?{/i}"
+    a "{i}(Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen. Er ist vollkommen wahnsinnig. Siehst du es denn nicht?){/i}"
+    a "{i}(Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?){/i}"
+    a "{i}(Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?){/i}"
     a "Nein… nein, ich will ein glückliches Leben haben."
 
     hide glitch
@@ -92,7 +92,7 @@ label zustimmen:
     k "Hast du was gesagt? Geht es dir gut? Du hast ziemlich weggetreten gewirkt."
     a "Ich… was? Ja… ja, mir geht es gut… ich…"
     k "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
-    a "{i}Ein glückliches Leben. Ein Leben voller Happiness.{/i}"
+    a "{i}(Ein glückliches Leben. Ein Leben voller Happiness.){/i}"
 
     $ renpy.movie_cutscene("atropos_will_kloth_toeten.mpg")
 
@@ -105,11 +105,9 @@ label ablehnen:
 
     k "Oh okay. Ja klar… wenn du nicht willst… ich kann dich nicht dazu zwingen. Ich wünschte du hättest mir zugehört, Atropos. Ich dachte wir wären Freunde."
     k "Aber da habe ich mich wohl getäuscht. Ich habe mich in dir getäuscht. In dem Moment, in dem ich dich am meisten brauche, bist du nicht für mich da."
-    a "{i}Lass dir kein schlechtes Gewissen einreden. Du hast die richtige Entscheidung getroffen.{/i}"
-    a "{i}Wie kann er sich dein Freund nennen und dich gleichzeitig in ein tödliches Geheimnis einweihen wollen? So jemand darf sich nicht dein Freund schimpfen.{/i}"
+    a "{i}(Lass dir kein schlechtes Gewissen einreden. Du hast die richtige Entscheidung getroffen.){/i}"
+    a "{i}(Wie kann er sich dein Freund nennen und dich gleichzeitig in ein tödliches Geheimnis einweihen wollen? So jemand darf sich nicht dein Freund schimpfen.){/i}"
     k "Vielleicht ist Chesis ja ein besserer Freund. Vielleicht hört wenigstens er mir zu."
-
-    # was?
 
     k "..."
     "Chesis" "..."
@@ -137,10 +135,10 @@ label verschieben:
 
     show kloth unsicherlaechelnd
 
-    a "{i}Rede nicht mit ihm. Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen.{/i}"
-    a "{i}Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast.{/i}"
-    a "{i}Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?{/i}"
-    a "{i}Lehne das Gespräch ab. Es wäre ein großer Fehler mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen.{/i}"
+    a "{i}(Rede nicht mit ihm. Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen.){/i}"
+    a "{i}(Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast.){/i}"
+    a "{i}(Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?){/i}"
+    a "{i}(Lehne das Gespräch ab. Es wäre ein großer Fehler mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen.){/i}"
 
     menu:
         "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher. Ich will lieber weiterhin mein glückliches Leben führen.":
