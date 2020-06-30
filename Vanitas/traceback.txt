@@ -1,36 +1,50 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-SyntaxError: invalid syntax (game/gui.rpy, line 280)
+While running game code:
+  File "game/script.rpy", line 47, in script
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+IOError: Couldn't find file 'Tagebuch.wav'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 558, in init_translation
-    renpy.store._init_language()  # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 638, in change_language
-    new_change_language(tl, language)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 604, in new_change_language
-    i.apply()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 2553, in apply
-    value = renpy.python.py_eval(expr)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/gui.rpy, line 280)
+  File "game/script.rpy", line 47, in script
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 671, in execute
+    statement_name("say")
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 45, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2251, in do_with
+    clear=clear)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'Tagebuch.wav'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Mon Jun 29 21:27:39 2020
+Tue Jun 30 15:24:10 2020

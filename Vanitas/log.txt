@@ -1,38 +1,39 @@
-Tue Jun 30 14:57:56 2020
+Tue Jun 30 15:27:27 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.13s
+Bootstrap to the start of init.init took 0.11s
 Early init took 0.00s
 Loader init took 0.04s
-Loading error handling took 0.09s
-Loading script took 1.39s
-Loading save slot metadata. took 0.13s
+Loading error handling took 0.04s
+Loading script took 0.29s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.66s
-Loading analysis data took 0.05s
+Running init code took 0.10s
+Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.11s
+Backing up script files to 'C:\\Users\\Tatiana Krupenina\\AppData\\Roaming/RenPy/backups\\Vanitas':
+Dump and make backups. took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
-Creating interface object took 0.12s
+Creating interface object took 0.10s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.09s
 Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.09s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.03s
+Interface start took 0.02s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -459,18 +460,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 4.8100001812s
+Total time until interface ready: 2.33100008965s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.020333 seconds.
-- Frame drawn at 0.031333 seconds.
-- 0.031333 seconds to render 5 frames.
-
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
+- Frame drawn at 0.016333 seconds.
+- Frame drawn at 0.021333 seconds.
+- Frame drawn at 0.035333 seconds.
+- 0.035333 seconds to render 5 frames.
