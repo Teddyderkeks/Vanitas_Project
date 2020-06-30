@@ -23,13 +23,12 @@ image glitch:
 
 label letzterTag:
     $ leiche = True
-    scene treppenhaus2
+    scene sepia
+    with fade
 
     show kloth aengstlich1:
         xalign 0.35
         yalign 1.0
-
-    show sepia
 
     k "Atropos!"
     a "Kloth, was ist los?"
