@@ -40,6 +40,8 @@ label treppenhaus2:
     else:
         if leiche:
             if zustimmen:
+                scene treppenhaus2leiche
+                with fade
 
                 a "Nein."
                 a "Nein!"
@@ -52,6 +54,8 @@ label treppenhaus2:
 
                 call screen pfeil_verlassen
             else:
+                scene treppenhaus2leiche
+                with fade
                 a "Nein."
                 a "Nein!"
                 a "Kloth… verdammt… wie konnte das nur passieren? "
@@ -62,7 +66,7 @@ label treppenhaus2:
                 a "Ich werde dich rächen, Kloth, das verspreche ich dir! Dein Mord wird nicht ungesühnt bleiben! "
                 a "Chesis wird dafür büßen. Dafür sorge ich. Wie konnte er es wagen heute Morgen so zu tun als wäre das alles nicht passiert?"
                 a "Wie konnte er es wagen mich anzulächeln und glücklich zu sein? Er hat es nicht verdient glücklich zu sein. Keiner hat das."
-                a "Ich werde dich rächen, Kloth und wenn es das letzte ist, was ich tue."
+                a "Ich werde dich rächen, Kloth und wenn es das Letzte ist, was ich tue."
 
                 call screen pfeil_verlassen
 
