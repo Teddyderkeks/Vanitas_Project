@@ -48,7 +48,7 @@ label start:
     scene tagebuch
     with fade
 
-    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+    a "{i}(Mein Tagebuch mit allem, was ich heute bereits erlebt habe.){/i}"
 
     call screen pfeil_rechts
 
@@ -58,9 +58,9 @@ label weiter:
 
     scene treppenhaus1gruppe
 
-    a "{i} Den Anschiss vom Boss hätte ich mir sparen können… ich hätte die Happiness-Pille heute Morgen einfach doch nehmen sollen. {/i}"
-    a "{i} Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären. {/i}"
-    a "{i} Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen. {/i}"
+    a "{i}(Den Anschiss vom Boss hätte ich mir sparen können… ich hätte die Happiness-Pille heute Morgen einfach doch nehmen sollen.){/i}"
+    a "{i}(Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären.){/i}"
+    a "{i}(Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen.){/i}"
 
     menu:
         "Ich könnte mir die Plakate mal etwas näher ansehen.":
