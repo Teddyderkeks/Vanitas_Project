@@ -155,6 +155,6 @@ label credits:
 
     scene credits
 
-    "Danke fürs Spielen"
+    "Fortsetzung folgt..."
 
     return

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/leiche.rpy", line 17: expected 'simple_expression' not found.
-    xpos:50
-        ^
+File "game/script.rpy", line 44: could not parse statement.
+    play music "Tagebuch.wav" tagebuchmusik
+                              ^
+
+File "game/script.rpy", line 53: expected end of line
+    stop musik tagebuchmusik
+               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jun 29 17:05:01 2020
+Tue Jun 30 15:27:05 2020

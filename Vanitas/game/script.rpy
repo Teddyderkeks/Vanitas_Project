@@ -2,8 +2,8 @@ define a = Character("Atropos")
 default glitchfertig = False
 image pfeil_rechts = Transform ("pfeil",rotate = 180)
 image pfeil_rechts_blau = Transform ("pfeilblau",rotate = 180)
-image pfeil_unten = Transform ("pfeil",rotate = 180)
-image pfeil_unten_blau = Transform ("pfeilblau",rotate = 180)
+image pfeil_unten = Transform ("pfeil",rotate = 270)
+image pfeil_unten_blau = Transform ("pfeilblau",rotate = 270)
 
 screen pfeiltreppe():
     frame:
@@ -26,6 +26,14 @@ screen pfeil_unten():
     frame:
         xpos 1600 ypos 890
         imagebutton:
+            idle "pfeil_unten"
+            hover "pfeil_unten_blau"
+            action Jump ("treppenhaus1")
+
+screen pfeil_backtreppe1():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
             idle "pfeil_rechts"
             hover "pfeil_rechts_blau"
             action Jump ("treppenhaus1")
@@ -33,13 +41,16 @@ screen pfeil_unten():
 
 label start:
 
+    play music "Tagebuch.wav" fadeout 1
     scene tagebuch
 
-    a "{i}{color=#000000}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/color}{/i}"
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
 
     call screen pfeil_rechts
 
 label weiter:
+
+    stop musik fadeout 1
 
     scene treppenhaus1gruppe
 
@@ -107,6 +118,7 @@ label plakate:
     a "Wie lösen die Pillen nur diese Glücklichkeit in einem aus? Ich entwickle sie selbst mit, aber ich habe trotzdem keine Ahnung wie sie eigentlich wirken."
     a "Ich sollte mich nicht zu lange mit den Plakaten beschäftigen. Ich habe keine Lust Anan noch einmal über den Weg zu laufen und einen weiteren Anschiss zu riskieren."
 
+    call screen pfeil_backtreppe1
 
 label treppenhaus1:
 

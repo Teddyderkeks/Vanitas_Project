@@ -19,8 +19,6 @@ image glitch:
         pause .09
         "glitch7"
         pause .09
-        "glitch8"
-        pause .09
         repeat
 
 label letzterTag:
@@ -30,6 +28,8 @@ label letzterTag:
     show kloth aengstlich1:
         xalign 0.35
         yalign 1.0
+
+    show sepia
 
     k "Atropos!"
     a "Kloth, was ist los?"
@@ -48,7 +48,7 @@ label letzterTag:
     show kloth aengstlich2
 
     k "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
-    k "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemanden darüber sprechen."
+    k "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
 
     show kloth aengstlich1
 
@@ -64,7 +64,7 @@ label letzterTag:
 
 label zustimmen:
 
-    $ zustimme =True
+    $ zustimmen =True
 
     k "(atmet erleichtert auf) Danke Atropos. Wirklich… vielen vielen Dank… du weißt nicht wie froh ich bin endlich jemanden zu haben, dem ich mich anvertrauen kann."
     a "Schon okay, nichts zu danken. Wir sind Freunde. Ich bin für dich da. Also, worum geht es?"
@@ -93,12 +93,10 @@ label zustimmen:
     k "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
     a "{i}Ein glückliches Leben. Ein Leben voller Happiness.{/i}"
 
-    #$ renpy.movie_cutscene("atropos_will_Kloth_toeten.mov")
-    #sequenz
-
-    "nein"
+    $ renpy.movie_cutscene("atropos_will_kloth_toeten.mpg")
 
     jump treppenhaus2
+
 
 label ablehnen:
 
@@ -118,7 +116,7 @@ label ablehnen:
     k "… Kontrolle …"
     k "..."
 
-    #sequenz
+    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
 
     jump treppenhaus2
 
@@ -150,9 +148,4 @@ label verschieben:
             jump zustimmen
 
 
-
-    #menu:
-        #"Ja":
-
-        #"Nein"
     jump treppenhaus2
