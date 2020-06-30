@@ -411,6 +411,10 @@ define gui.nvl_button_xalign = 0.0
 
 define gui.language = "unicode"
 
+##Musik Main Menu
+
+define config.main_menu_music = "Hauptmenu.mp3"
+
 
 ################################################################################
 ## Mobile devices

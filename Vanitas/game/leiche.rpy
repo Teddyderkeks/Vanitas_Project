@@ -78,6 +78,7 @@ label zustimmen:
     k "Atropos. Es gibt etwas anderes, das die Menschen ..."
 
     show glitch
+    play music "Glitch.mp3"
 
     a "{i}Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen. Er ist vollkommen wahnsinnig. Siehst du es denn nicht?{/i}"
     a "{i}Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?{/i}"
@@ -85,6 +86,7 @@ label zustimmen:
     a "Nein… nein, ich will ein glückliches Leben haben."
 
     hide glitch
+    stop music
 
     show kloth aengstlich2
 
