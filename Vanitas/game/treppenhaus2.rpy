@@ -33,9 +33,9 @@ label treppenhaus2:
 
             menu:
                 "Ich sollte ins Labor zurück und meine Pille nehmen. Wenn Anan mich immer noch hier herumstehen sieht, bekomme ich ein Problem.":
-                    jump leiche
-                "Ich muss mir zuvor die Leiche ansehen. Irgendetwas stimmt nicht. Ich habe Kloth den ganzen Tag noch nicht gesehen.":
                     jump dochleiche
+                "Ich muss mir zuvor die Leiche ansehen. Irgendetwas stimmt nicht. Ich habe Kloth den ganzen Tag noch nicht gesehen.":
+                    jump leiche
 
     else:
         if leiche:
@@ -158,7 +158,7 @@ label leiche:
 label credits:
 
     show credits:
-        xpan 0
+        ypos 0
         linear 25.0 ypan 360
 
     a"Fortsetzung folgt..."
