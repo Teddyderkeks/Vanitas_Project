@@ -93,12 +93,10 @@ label zustimmen:
     k "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
     a "{i}Ein glückliches Leben. Ein Leben voller Happiness.{/i}"
 
-    #$ renpy.movie_cutscene("atropos_will_Kloth_toeten.mov")
-    #sequenz
-
-    "nein"
+    $ renpy.movie_cutscene("atropos_will_kloth_toeten.mpg")
 
     jump treppenhaus2
+    
 
 label ablehnen:
 
@@ -118,7 +116,7 @@ label ablehnen:
     k "… Kontrolle …"
     k "..."
 
-    #sequenz
+    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
 
     jump treppenhaus2
 

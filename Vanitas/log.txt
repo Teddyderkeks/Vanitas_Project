@@ -1,4 +1,4 @@
-Tue Jun 30 13:56:46 2020
+Tue Jun 30 14:20:22 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
@@ -11,12 +11,12 @@ Loading script took 0.15s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
+Running init code took 0.07s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Tatiana Krupenina\\AppData\\Roaming/RenPy/backups\\Vanitas':
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -460,11 +460,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.54699993134s
+Total time until interface ready: 1.57000017166s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.014333 seconds.
-- Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.023333 seconds.
-- Frame drawn at 0.037333 seconds.
-- 0.037333 seconds to render 5 frames.
+- Frame drawn at 0.016333 seconds.
+- Frame drawn at 0.017334 seconds.
+- Frame drawn at 0.025333 seconds.
+- Frame drawn at 0.039333 seconds.
+- 0.039333 seconds to render 5 frames.
