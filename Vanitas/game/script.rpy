@@ -41,6 +41,7 @@ screen pfeil_backtreppe1():
 
 label start:
 
+    play music "Tagebuch.wav" fadeout 1
     scene tagebuch
 
     a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
@@ -48,6 +49,8 @@ label start:
     call screen pfeil_rechts
 
 label weiter:
+
+    stop musik fadeout 1
 
     scene treppenhaus1gruppe
 

@@ -19,8 +19,6 @@ image glitch:
         pause .09
         "glitch7"
         pause .09
-        "glitch8"
-        pause .09
         repeat
 
 label letzterTag:
@@ -30,6 +28,8 @@ label letzterTag:
     show kloth aengstlich1:
         xalign 0.35
         yalign 1.0
+
+    show sepia
 
     k "Atropos!"
     a "Kloth, was ist los?"
@@ -96,7 +96,7 @@ label zustimmen:
     $ renpy.movie_cutscene("atropos_will_kloth_toeten.mpg")
 
     jump treppenhaus2
-    
+
 
 label ablehnen:
 
