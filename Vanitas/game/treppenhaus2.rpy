@@ -153,8 +153,10 @@ label leiche:
 
 label credits:
 
-    scene credits
+    show credits:
+        xpan 0
+        linear 25.0 ypan 360
 
-    "Fortsetzung folgt..."
+    a"Fortsetzung folgt..."
 
     return
