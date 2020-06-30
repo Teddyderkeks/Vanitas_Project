@@ -35,7 +35,7 @@ label start:
 
     scene tagebuch
 
-    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+    a "{i}{color=#000000}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/color}{/i}"
 
     call screen pfeil_rechts
 
