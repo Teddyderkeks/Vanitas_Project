@@ -41,8 +41,14 @@ screen pfeil_backtreppe1():
 
 label start:
 
+    hide window
+    scene mitmottehinten
+    with pushright
+    pause 1.0
+
     play music "Tagebuch.mp3" fadeout 1
     scene tagebuch
+    with fade
 
     a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
 
