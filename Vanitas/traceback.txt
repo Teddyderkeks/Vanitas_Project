@@ -1,32 +1,111 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 590, in prepare_screen
-    screen save():
-  File "game/screens.rpy", line 590, in prepare
-    screen save():
-Exception: A screen named file_slots does not exist.
+While running game code:
+  File "game/screens.rpy", line 553, in execute
+    screen about():
+  File "game/screens.rpy", line 553, in execute
+    screen about():
+  File "game/screens.rpy", line 560, in execute
+    use game_menu(_("Version"), scroll="viewport"):
+  File "game/screens.rpy", line 427, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 427, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 436, in execute
+    frame:
+  File "game/screens.rpy", line 439, in execute
+    hbox:
+  File "game/screens.rpy", line 445, in execute
+    frame:
+  File "game/screens.rpy", line 448, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 450, in execute
+    viewport:
+  File "game/screens.rpy", line 459, in execute
+    vbox:
+  File "game/screens.rpy", line 460, in execute
+    transclude
+  File "game/screens.rpy", line 560, in execute
+    use game_menu(_("Version"), scroll="viewport"):
+  File "game/screens.rpy", line 564, in execute
+    vbox:
+  File "game/screens.rpy", line 570, in execute
+    imagebutton:
+  File "game/screens.rpy", line 570, in keywords
+    imagebutton:
+NameError: name 'logo' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 94, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 931, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 590, in prepare_screen
-    screen save():
-  File "game/screens.rpy", line 590, in prepare
-    screen save():
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\sl2\slast.py", line 1719, in prepare
-    raise Exception("A screen named {} does not exist.".format(self.target))
-Exception: A screen named file_slots does not exist.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+    callback(self)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
+    self.update()
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 553, in execute
+    screen about():
+  File "game/screens.rpy", line 553, in execute
+    screen about():
+  File "game/screens.rpy", line 560, in execute
+    use game_menu(_("Version"), scroll="viewport"):
+  File "game/screens.rpy", line 427, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 427, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 436, in execute
+    frame:
+  File "game/screens.rpy", line 439, in execute
+    hbox:
+  File "game/screens.rpy", line 445, in execute
+    frame:
+  File "game/screens.rpy", line 448, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 450, in execute
+    viewport:
+  File "game/screens.rpy", line 459, in execute
+    vbox:
+  File "game/screens.rpy", line 460, in execute
+    transclude
+  File "game/screens.rpy", line 560, in execute
+    use game_menu(_("Version"), scroll="viewport"):
+  File "game/screens.rpy", line 564, in execute
+    vbox:
+  File "game/screens.rpy", line 570, in execute
+    imagebutton:
+  File "game/screens.rpy", line 570, in keywords
+    imagebutton:
+  File "<screen language>", line 571, in <module>
+NameError: name 'logo' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Tue Jun 30 23:32:25 2020
+Wed Jul 01 23:20:27 2020

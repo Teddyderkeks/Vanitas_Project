@@ -5,6 +5,7 @@
 init offset = -1
 
 
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -378,6 +379,12 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
+            #text "Alle Rechte bei":
+                #style "main_menu_title"
+
+            #text "Nightshade Games":
+                #style "main_menu_title"
+
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -558,6 +565,11 @@ screen about():
 
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
+            text _("Alle Rechte bei:")
+            label "Nightshade Games"
+            imagebutton:
+                idle logo
+                action NullAction
 
             ## gui.about is usually set in options.rpy.
             #if gui.about:

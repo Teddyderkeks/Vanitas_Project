@@ -170,9 +170,9 @@ label leiche:
     a "Ich… ich brauche dich. "
     a "Ich… "
     a "Bitte…"
-        if konversation:
-            a "Wieso haben die anderen vorhin nichts gesagt? Sie hätten dich doch sehen müssen. Kloth… warum haben sie dir nicht geholfen?"
-            a "Warum sind sie einfach vorbeigegangen und haben dich ignoriert? Vielleicht wärst du dann jetzt noch am Leben."
+    if konversation:
+        a "Wieso haben die anderen vorhin nichts gesagt? Sie hätten dich doch sehen müssen. Kloth… warum haben sie dir nicht geholfen?"
+        a "Warum sind sie einfach vorbeigegangen und haben dich ignoriert? Vielleicht wärst du dann jetzt noch am Leben."
     a "Verdammt, das darf doch alles nicht wahr sein. Warum nur? Warum? Warum? "
     a "WARUM?"
     a "Kann das alles einfach nur ein schlechter Traum sein? Ich habe nicht die Kraft es durchzustehen, falls es wirklich wahr sein sollte…"
@@ -187,7 +187,7 @@ label leiche:
 label credits:
 
     show credits:
-        ypos 0
+        ypos 3400
         linear 50.0 ypan 360
 
     a"Fortsetzung folgt..."
