@@ -411,6 +411,8 @@ define gui.nvl_button_xalign = 0.0
 
 define gui.language = "unicode"
 
+define config.enable_language_autodetect = True
+
 ##Musik Main Menu
 
 define config.main_menu_music = "Hauptmenu.mp3"
