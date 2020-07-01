@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 657: Line is indented, but the preceding use statement statement does not expect a block. Please check this line's indentation.
-    hbox:
-    ^
+File "game/screens.rpy", line 571: u'show' is not a keyword argument or valid child for the screen statement.
+    show logo:
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Jun 30 23:29:49 2020
+Wed Jul 01 23:17:37 2020

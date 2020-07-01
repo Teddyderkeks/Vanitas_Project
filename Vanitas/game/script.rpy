@@ -1,9 +1,11 @@
 define a = Character("Atropos")
+define konversation = False
 default glitchfertig = False
 image pfeil_rechts = Transform ("pfeil",rotate = 180)
 image pfeil_rechts_blau = Transform ("pfeilblau",rotate = 180)
 image pfeil_unten = Transform ("pfeil",rotate = 270)
 image pfeil_unten_blau = Transform ("pfeilblau",rotate = 270)
+
 
 screen pfeiltreppe():
     frame:
@@ -156,7 +158,7 @@ label treppenhausOhneMenu:
 
 label treppenhausOhneMenu2:
 
-    "{i}(Ja, sie ist eindeutig wichtiger. Nimm sie und werde wieder glücklich.){/i}"
+    a "{i}(Ja, sie ist eindeutig wichtiger. Nimm sie und werde wieder glücklich.){/i}"
 
     call screen pfeiltreppe
 
