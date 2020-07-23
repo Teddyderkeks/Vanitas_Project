@@ -192,7 +192,7 @@ label credits:
         ypos 3400
         linear 50.0 ypan 360
 
-    a"Fortsetzung folgt..."
+    a "Fortsetzung folgt..."
 
 
     return
