@@ -2,7 +2,6 @@
 ﻿define a = Character("Atropos")
 define konversation = False
 =======
-# Dies ist ein Test
 
 define a = Character("Atropos")
 >>>>>>> Sabrina:Vanitas/game/script.rpy
