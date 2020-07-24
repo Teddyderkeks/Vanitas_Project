@@ -1,5 +1,11 @@
+<<<<<<< HEAD:Vanitas Prototyp/game/script.rpy
 ﻿define a = Character("Atropos")
 define konversation = False
+=======
+# Dies ist ein Test
+
+define a = Character("Atropos")
+>>>>>>> Sabrina:Vanitas/game/script.rpy
 default glitchfertig = False
 image pfeil_rechts = Transform ("pfeil",rotate = 180)
 image pfeil_rechts_blau = Transform ("pfeilblau",rotate = 180)
@@ -50,7 +56,13 @@ label start:
     scene tagebuch
     with fade
 
+<<<<<<< HEAD:Vanitas Prototyp/game/script.rpy
     a "{i}(Mein Tagebuch mit allem, was ich heute bereits erlebt habe.){/i}"
+=======
+
+
+    a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
+>>>>>>> Sabrina:Vanitas/game/script.rpy
 
     call screen pfeil_rechts
 
