@@ -1,3 +1,5 @@
+# Dies ist ein Test
+
 define a = Character("Atropos")
 default glitchfertig = False
 image pfeil_rechts = Transform ("pfeil",rotate = 180)
@@ -43,6 +45,8 @@ label start:
 
     play music "Tagebuch.mp3" fadeout 1
     scene tagebuch
+
+
 
     a "{i}Mein Tagebuch mit allem, was ich heute bereits erlebt habe.{/i}"
 
