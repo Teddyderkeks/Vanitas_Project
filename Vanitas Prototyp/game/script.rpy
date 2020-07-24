@@ -72,6 +72,7 @@ label weiter:
     scene treppenhaus1gruppe
     #test
     a "(Dies ist ein Test)"
+    a "(Dies ist ein Test)"
     a "{i}(Den Anschiss vom Boss hätte ich mir sparen können… ich hätte die Happiness-Pille heute Morgen einfach doch nehmen sollen.){/i}"
     a "{i}(Ob es wohl Auswirkungen hat, wenn ich sie einen einzigen Tag nicht nehme? Anders kann ich mir Anans Reaktion echt nicht erklären.){/i}"
     a "{i}(Hmm… ich glaube die Plakate sind neu. Wie Aither die Pillen wohl dieses Mal bewirbt? Sie lassen sich echt immer was Neues einfallen.){/i}"
